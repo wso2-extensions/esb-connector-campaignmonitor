@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+~  Copyright (c) 2016, WSO2 Inc. (http://wso2.com) All Rights Reserved.
+~
+~  WSO2 Inc. licenses this file to you under the Apache License,
+~  Version 2.0 (the "License"); you may not use this file except
+~  in compliance with the License.
+~  You may obtain a copy of the License at
+~
+~   http://www.apache.org/licenses/LICENSE-2.0
+~
+~  Unless required by applicable law or agreed to in writing,
+~  software distributed under the License is distributed on an
+~  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+~  KIND, either express or implied.  See the License for the
+~  specific language governing permissions and limitations
+~  under the License.
+-->
+<component name="campaignmonitor-clients" type="synapse/template">
+    <subComponents>
+        <component name="listCampaigns">
+            <file>listCampaigns.xml</file>
+            <description>Returns a list of all draft campaigns belonging to the client including
+                from name, from email, reply to email, preview URL, ID, subject, name, and the date
+                the draft was created
+            </description>
+        </component>
+        <component name="listSubscriberLists">
+            <file>listSubscriberLists.xml</file>
+            <description>Returns all the subscriber lists that belong to the client, including the
+                list name and ID
+            </description>
+        </component>
+        <component name="addSubscribersToList">
+            <file>addSubscribersToList.xml</file>
+            <description>Import Subscribers to list</description>
+        </component>
+    </subComponents>
+</component>
