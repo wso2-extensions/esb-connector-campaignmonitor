@@ -58,33 +58,31 @@
         </payloadFactory>
         <script language="js">
             <![CDATA[
-			
-				// Sets optional payload parameter, note that either one of the following two parameters should be present in the request
-				var segmentIds = mc.getProperty("uri.var.segmentIds");
-				var listIds = mc.getProperty("uri.var.listIds");
-				
-				payload = mc.getPayloadXML();
-	
-				if (segmentIds != null && segmentIds != "") {
-					var segmentArray = eval("(" + segmentIds + ")");
-				
-					for(var i=0;i<segmentArray.length; i++){
-	                  var segmentElement = segmentArray[i];
-	                  payload.SegmentIDs.SegmentID += <SegmentID>{segmentElement}</SegmentID>;
-                								      }
-				}
-				
-				if (listIds != null && listIds != "") {
-					var listArray = eval("(" + listIds + ")");
-					
-					for(var i=0;i<listArray.length; i++){
-	                  var listElement = listArray[i];
-	                  payload.ListIDs.ListID += <ListID>{listElement}</ListID>;
-                	}
-				}
-				
-				mc.setPayloadXML(payload);	
-			]]>
+                // Sets optional payload parameter, note that either one of the following two parameters should be present in the request
+                var segmentIds = mc.getProperty("uri.var.segmentIds");
+                var listIds = mc.getProperty("uri.var.listIds");
+
+                payload = mc.getPayloadXML();
+
+                if (segmentIds != null && segmentIds != "") {
+                    var segmentArray = eval("(" + segmentIds + ")");
+
+                    for(var i=0;i<segmentArray.length; i++){
+                      var segmentElement = segmentArray[i];
+                      payload.SegmentIDs.SegmentID += <SegmentID>{segmentElement}</SegmentID>;
+                    }
+                }
+
+                if (listIds != null && listIds != "") {
+                    var listArray = eval("(" + listIds + ")");
+
+                    for(var i=0;i<listArray.length; i++){
+                      var listElement = listArray[i];
+                      payload.ListIDs.ListID += <ListID>{listElement}</ListID>;
+                    }
+                }
+                mc.setPayloadXML(payload);
+            ]]>
         </script>
         <property name="messageType" value="application/xml" scope="axis2"></property>
         <call>

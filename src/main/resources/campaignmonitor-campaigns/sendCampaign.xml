@@ -44,7 +44,6 @@
                       uri-template="{uri.var.apiUrl}/api/v3.1/campaigns/{uri.var.campaignId}/send.json"/>
             </endpoint>
         </call>
-        l
         <!-- Removing custom headers -->
         <header name="P3P" action="remove" scope="transport"/>
         <header name="WWW-Authenticate" action="remove" scope="transport"/>

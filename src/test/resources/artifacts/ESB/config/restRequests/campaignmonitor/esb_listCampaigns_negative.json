@@ -1,5 +1,5 @@
 {
-"apiUrl":"%s(apiUrl)",
-"accessToken":"%s(accessToken)",
-"clientId":"-"
+  "apiUrl": "%s(apiUrl)",
+  "accessToken": "%s(accessToken)",
+  "clientId": "-"
 }

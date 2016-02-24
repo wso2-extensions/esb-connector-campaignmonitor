@@ -40,58 +40,58 @@
         <property name="uri.var.templateContent" expression="$func:templateContent"/>
         <script language="js">
             <![CDATA[
-				var name=mc.getProperty("uri.var.name");
-				var subject = mc.getProperty("uri.var.subject");
-				var fromName = mc.getProperty("uri.var.fromName");
-				var fromEmail = mc.getProperty("uri.var.fromEmail");
-				var replyTo = mc.getProperty("uri.var.replyTo");
-				var listIds = mc.getProperty("uri.var.listIds");
-				var segmentIds = mc.getProperty("uri.var.segmentIds");
-				
-				var templateId = mc.getProperty("uri.var.templateId");
-				var templateContent = mc.getProperty("uri.var.templateContent");
-				
-				payload = mc.getPayloadJSON();
-				payload = eval("({})");
-				
-				if(name!=null && name != ""){
-					payload.Name= name;
-				}
-				
-				if (subject != null && subject != "") {
-					payload.Subject=subject;
-				}
-				
-				if (fromName != null && fromName != "") {
-					payload.FromName=fromName;
-				}
-				
-				if (fromEmail != null && fromEmail != "") {
-					payload.FromEmail=fromEmail;
-				}
-				
-				if (replyTo != null && replyTo != "") {
-					payload.ReplyTo=replyTo;
-				}
-				
-				if (listIds != null && listIds != "") {
-					payload.ListIDs=eval("("+ listIds + ")");
-				}
-				
-				if (segmentIds != null && segmentIds != "") {
-					payload.SegmentIDs=eval("("+ segmentIds + ")");
-				}
-				
-				if (templateId != null && templateId != "") {
-					payload.TemplateID=templateId;
-				}
-				
-				if (templateContent != null && templateContent != "") {
-					payload.TemplateContent=eval("("+ templateContent + ")");
-				}
-				print(payload);
-				mc.setPayloadJSON(payload);	
-			]]>
+                var name=mc.getProperty("uri.var.name");
+                var subject = mc.getProperty("uri.var.subject");
+                var fromName = mc.getProperty("uri.var.fromName");
+                var fromEmail = mc.getProperty("uri.var.fromEmail");
+                var replyTo = mc.getProperty("uri.var.replyTo");
+                var listIds = mc.getProperty("uri.var.listIds");
+                var segmentIds = mc.getProperty("uri.var.segmentIds");
+
+                var templateId = mc.getProperty("uri.var.templateId");
+                var templateContent = mc.getProperty("uri.var.templateContent");
+
+                payload = mc.getPayloadJSON();
+                payload = eval("({})");
+
+                if(name!=null && name != ""){
+                    payload.Name= name;
+                }
+
+                if (subject != null && subject != "") {
+                    payload.Subject=subject;
+                }
+
+                if (fromName != null && fromName != "") {
+                    payload.FromName=fromName;
+                }
+
+                if (fromEmail != null && fromEmail != "") {
+                    payload.FromEmail=fromEmail;
+                }
+
+                if (replyTo != null && replyTo != "") {
+                    payload.ReplyTo=replyTo;
+                }
+
+                if (listIds != null && listIds != "") {
+                    payload.ListIDs=eval("("+ listIds + ")");
+                }
+
+                if (segmentIds != null && segmentIds != "") {
+                    payload.SegmentIDs=eval("("+ segmentIds + ")");
+                }
+
+                if (templateId != null && templateId != "") {
+                    payload.TemplateID=templateId;
+                }
+
+                if (templateContent != null && templateContent != "") {
+                    payload.TemplateContent=eval("("+ templateContent + ")");
+                }
+                print(payload);
+                mc.setPayloadJSON(payload);
+            ]]>
         </script>
         <call>
             <endpoint>

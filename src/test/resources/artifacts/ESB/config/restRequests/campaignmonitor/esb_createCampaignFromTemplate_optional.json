@@ -1,16 +1,20 @@
 {
-    "apiUrl": "%s(apiUrl)",
-    "accessToken": "%s(accessToken)",
-	"clientId":"%s(clientId)",
-    "name": "%s(campaignNameForTemplate)",
-    "subject": "Campaign Subject",
-    "fromName": "Campaign Sender's Name",
-    "fromEmail": "myemail@mydomain.com",
-    "replyTo": "myemail@mydomain.com",
-    "segmentIds": ["%s(segmentId)"],
-    "listIds": ["%s(listId)"],
-    "templateId": "%s(templateId)",
-    "templateContent":{
+  "apiUrl": "%s(apiUrl)",
+  "accessToken": "%s(accessToken)",
+  "clientId": "%s(clientId)",
+  "name": "%s(campaignNameForTemplate)",
+  "subject": "Campaign Subject",
+  "fromName": "Campaign Sender's Name",
+  "fromEmail": "myemail@mydomain.com",
+  "replyTo": "myemail@mydomain.com",
+  "segmentIds": [
+    "%s(segmentId)"
+  ],
+  "listIds": [
+    "%s(listId)"
+  ],
+  "templateId": "%s(templateId)",
+  "templateContent": {
     "Singlelines": [
       {
         "Content": "This is a heading",

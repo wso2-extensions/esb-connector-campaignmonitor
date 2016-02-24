@@ -36,38 +36,38 @@
         <property name="uri.var.orderDirection" expression="$func:orderDirection"/>
         <script language="js">
             <![CDATA[
-		// optional url param variables
-		var date = mc.getProperty("uri.var.date");
-		var page = mc.getProperty("uri.var.page");
-		var pageSize  = mc.getProperty('uri.var.pageSize');
-		var orderField  = mc.getProperty('uri.var.orderField');
-		var orderDirection  = mc.getProperty('uri.var.orderDirection');
-		
-		var uriParams = '';
-		
-		if (date != null && date != "") {
-			uriParams = 'date=' + date + '&';
-		}
-		
-		if (page != null && page != "") {
-			uriParams += 'page=' + page + '&';
-		}
-		
-		if (pageSize != null && pageSize != "") {
-			uriParams += 'pagesize=' + pageSize + '&';
-		}
-		
-		if (orderField != null && orderField != "") {
-			uriParams += 'orderfield=' + orderField + '&';
-		}
-		
-		if (orderDirection != null && orderDirection != "") {
-			uriParams += 'orderdirection=' + orderDirection + '&';
-		}
-		
-		if(uriParams != ''){
-			mc.setProperty("uri.var.uriParams" , '?' + uriParams.substring(0, uriParams.length-1));
-		}
+            // optional url param variables
+            var date = mc.getProperty("uri.var.date");
+            var page = mc.getProperty("uri.var.page");
+            var pageSize  = mc.getProperty('uri.var.pageSize');
+            var orderField  = mc.getProperty('uri.var.orderField');
+            var orderDirection  = mc.getProperty('uri.var.orderDirection');
+
+            var uriParams = '';
+
+            if (date != null && date != "") {
+                uriParams = 'date=' + date + '&';
+            }
+
+            if (page != null && page != "") {
+                uriParams += 'page=' + page + '&';
+            }
+
+            if (pageSize != null && pageSize != "") {
+                uriParams += 'pagesize=' + pageSize + '&';
+            }
+
+            if (orderField != null && orderField != "") {
+                uriParams += 'orderfield=' + orderField + '&';
+            }
+
+            if (orderDirection != null && orderDirection != "") {
+                uriParams += 'orderdirection=' + orderDirection + '&';
+            }
+
+            if(uriParams != ''){
+                mc.setProperty("uri.var.uriParams" , '?' + uriParams.substring(0, uriParams.length-1));
+            }
 			]]>
         </script>
         <call>

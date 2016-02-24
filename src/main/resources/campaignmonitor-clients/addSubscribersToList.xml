@@ -42,31 +42,31 @@
         </payloadFactory>
         <script language="js">
             <![CDATA[
-				var subscribers=mc.getProperty("uri.var.subscribers");
-				var resubscribe = mc.getProperty("uri.var.resubscribe");
-				var queueSubscriptionBasedAutoResponders = mc.getProperty("uri.var.queueSubscriptionBasedAutoResponders");
-				var restartSubscriptionBasedAutoresponders = mc.getProperty("uri.var.restartSubscriptionBasedAutoresponders");
-				
-				payload = mc.getPayloadJSON();
-				
-				if(subscribers!=null && subscribers != ""){
-					payload.Subscribers= eval("("+ subscribers + ")");
-				}
+                var subscribers=mc.getProperty("uri.var.subscribers");
+                var resubscribe = mc.getProperty("uri.var.resubscribe");
+                var queueSubscriptionBasedAutoResponders = mc.getProperty("uri.var.queueSubscriptionBasedAutoResponders");
+                var restartSubscriptionBasedAutoresponders = mc.getProperty("uri.var.restartSubscriptionBasedAutoresponders");
 
-				if (resubscribe != null && resubscribe != "") {
-					payload.Resubscribe=eval("("+ resubscribe + ")");
-				}
-				
-				if (queueSubscriptionBasedAutoResponders != null && queueSubscriptionBasedAutoResponders != "") {
-					payload.QueueSubscriptionBasedAutoResponders=eval("("+ queueSubscriptionBasedAutoResponders + ")");
-				}
-				
-				if (restartSubscriptionBasedAutoresponders != null && restartSubscriptionBasedAutoresponders != "") {
-					payload.RestartSubscriptionBasedAutoresponders=eval("("+ restartSubscriptionBasedAutoresponders + ")");
-				}
-				print(payload);
-				mc.setPayloadJSON(payload);	
-			]]>
+                payload = mc.getPayloadJSON();
+
+                if(subscribers!=null && subscribers != ""){
+                    payload.Subscribers= eval("("+ subscribers + ")");
+                }
+
+                if (resubscribe != null && resubscribe != "") {
+                    payload.Resubscribe=eval("("+ resubscribe + ")");
+                }
+
+                if (queueSubscriptionBasedAutoResponders != null && queueSubscriptionBasedAutoResponders != "") {
+                    payload.QueueSubscriptionBasedAutoResponders=eval("("+ queueSubscriptionBasedAutoResponders + ")");
+                }
+
+                if (restartSubscriptionBasedAutoresponders != null && restartSubscriptionBasedAutoresponders != "") {
+                    payload.RestartSubscriptionBasedAutoresponders=eval("("+ restartSubscriptionBasedAutoresponders + ")");
+                }
+                print(payload);
+                mc.setPayloadJSON(payload);
+            ]]>
         </script>
         <call>
             <endpoint>
