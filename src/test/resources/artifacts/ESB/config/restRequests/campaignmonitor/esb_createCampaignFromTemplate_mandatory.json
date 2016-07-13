@@ -7,9 +7,7 @@
   "fromName": "Campaign Sender's Name",
   "fromEmail": "myemail@mydomain.com",
   "replyTo": "myemail@mydomain.com",
-  "listIds": [
-    "%s(listId)"
-  ],
+  "listIds": ["%s(listId)"],
   "templateId": "%s(templateId)",
   "templateContent": {
     "Singlelines": [
@@ -25,7 +23,7 @@
     ],
     "Images": [
       {
-        "Content": "http://onsitepcsolution.com/wp-content/uploads/2014/08/java_tech.jpg",
+        "Content": "http://www.planwallpaper.com/static/images/4-Nature-Wallpapers-2014-1_ukaavUI.jpg",
         "Alt": "This is alt text for an image",
         "Href": "http://example.com/"
       }
@@ -48,7 +46,7 @@
             ],
             "Images": [
               {
-                "Content": "http://onsitepcsolution.com/wp-content/uploads/2014/08/java_tech.jpg",
+                "Content": "http://www.planwallpaper.com/static/images/4-Nature-Wallpapers-2014-1_ukaavUI.jpg",
                 "Alt": "This is alt text for a repeater image",
                 "Href": "http://example.com/"
               }

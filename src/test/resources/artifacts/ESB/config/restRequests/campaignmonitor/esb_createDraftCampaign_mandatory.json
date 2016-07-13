@@ -8,7 +8,5 @@
   "fromEmail": "myemail@mydomain.com",
   "replyToEmail": "myemail@mydomain.com",
   "htmlUrl": "%s(htmlUrl)",
-  "listIds": [
-    "%s(listId)"
-  ]
+  "listIds": ["%s(listId)"]
 }

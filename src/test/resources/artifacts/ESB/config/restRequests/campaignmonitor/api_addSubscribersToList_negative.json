@@ -2,7 +2,7 @@
   "Subscribers": [
     {
       "EmailAddress": "INVALID",
-      "Name": "Subscriber Name",
+      "Name": "Subscriber Name"
     }
   ],
   "Resubscribe": true,

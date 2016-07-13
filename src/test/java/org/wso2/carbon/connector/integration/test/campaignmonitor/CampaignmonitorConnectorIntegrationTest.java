@@ -18,10 +18,6 @@
 
 package org.wso2.carbon.connector.integration.test.campaignmonitor;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
@@ -29,6 +25,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.wso2.connector.integration.test.base.ConnectorIntegrationTestBase;
 import org.wso2.connector.integration.test.base.RestResponse;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CampaignmonitorConnectorIntegrationTest extends ConnectorIntegrationTestBase {
 
@@ -96,10 +96,11 @@ public class CampaignmonitorConnectorIntegrationTest extends ConnectorIntegratio
         RestResponse<JSONObject> apiRestResponseForSegments =
                 sendJsonRestRequest(apiEndPointForSegments, "GET", apiRequestHeadersMap);
         JSONArray segmentArray = new JSONArray(apiRestResponseForSegments.getBody().get("output").toString());
-        connectorProperties.put("segmentId", segmentArray.getJSONObject(0).get("SegmentID").toString());
+
+        connectorProperties.put("segmentId", segmentArray.getJSONObject(0).get("SegmentID"));
 
         RestResponse<JSONObject> esbRestResponse =
-                sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_createDraftCampaig_optional.json");
+                sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_createDraftCampaign_optional.json");
 
         // Adding the returned campaign id to property file
         String campaignId = esbRestResponse.getBody().get("string").toString();

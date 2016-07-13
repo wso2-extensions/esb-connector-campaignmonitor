@@ -107,8 +107,7 @@
                     <campaignmonitor.sendCampaign>
                         <sendDate>{$ctx:sendDate}</sendDate>
                         <campaignId>{$ctx:campaignId}</campaignId>
-                        <confirmationEmailsList>{$ctx:confirmationEmailsList}
-                        </confirmationEmailsList>
+                        <confirmationEmailsList>{$ctx:confirmationEmailsList}</confirmationEmailsList>
                     </campaignmonitor.sendCampaign>
                 </case>
                 <case regex="urn:addSubscribersToList">
@@ -116,12 +115,8 @@
                         <listId>{$ctx:listId}</listId>
                         <subscribers>{$ctx:subscribers}</subscribers>
                         <resubscribe>{$ctx:resubscribe}</resubscribe>
-                        <queueSubscriptionBasedAutoResponders>
-                            {$ctx:queueSubscriptionBasedAutoResponders}
-                        </queueSubscriptionBasedAutoResponders>
-                        <restartSubscriptionBasedAutoresponders>
-                            {$ctx:restartSubscriptionBasedAutoresponders}
-                        </restartSubscriptionBasedAutoresponders>
+                        <queueSubscriptionBasedAutoResponders>{$ctx:queueSubscriptionBasedAutoResponders}</queueSubscriptionBasedAutoResponders>
+                        <restartSubscriptionBasedAutoresponders>{$ctx:restartSubscriptionBasedAutoresponders}</restartSubscriptionBasedAutoresponders>
                     </campaignmonitor.addSubscribersToList>
                 </case>
                 <case regex="urn:createCampaignFromTemplate">

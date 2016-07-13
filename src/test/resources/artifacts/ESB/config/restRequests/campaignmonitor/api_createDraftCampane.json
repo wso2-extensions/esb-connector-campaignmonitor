@@ -4,7 +4,5 @@
   "FromName": "My Name",
   "ReplyTo": "myemail@mydomain.com",
   "HtmlUrl": "http://www.karelia.com/support/sandvox/help/z/Raw_HTML.html",
-  "ListIDs": [
-    "%s(listId)"
-  ]
+  "ListIDs": ["%s(listId)"]
 }

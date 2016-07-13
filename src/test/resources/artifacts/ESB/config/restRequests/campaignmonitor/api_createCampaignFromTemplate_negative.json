@@ -4,9 +4,7 @@
   "FromName": "Campaign Sender's Name",
   "FromEmail": "myemail@mydomain.com",
   "ReplyTo": "myemail@mydomain.com",
-  "ListIDs": [
-    "%s(listId)"
-  ],
+  "ListIDs": ["%s(listId)"],
   "TemplateID": "%s(templateId)",
   "TemplateContent": {
     "Singlelines": [
